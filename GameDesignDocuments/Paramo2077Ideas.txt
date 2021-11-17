@@ -1,0 +1,28 @@
+los putnos donde se dispara deben ser gandes para que el jugador no deba ser preciso \
+que haya distintos puntos de disparo, joroba, pierna, brazos
+tener 3 enemigos diferentes
+La planta recupera menos agua que el apuntarle al zombie, ademasa medida que apsa el tiempo la planta pierde el agua que el jugador puede recuperar
+si el zombie te pego poner toda la pantalla en rojo por medio segundo
+Poner la flecha roja cuando hay zombies sufiecientemente cerca, no cuando ya te estan pegando
+Cuando sale la planta aparece pasto al rededor que ralentiza a los enemigos
+Cuando se apunta a un enemigo el control vivbra por medio segundo, cuando dispara vibra completamente
+Hacer que el mapa tenga edificios, arboles, rocas de donde aparezcan los enemigos, y estos aparezcan en puntos predefinidos y no de los 360 grados
+por ejemplo una calle donde aparezcan zombies de 4 puntos distintos
+balancear la velocidad d elos enemigos, diferencias entre diferenets tipos de enemigos, mas rapidos, mas grandes
+Cuando se pasa una oleada, hay silencio y c8uando vuelven a aparecer los zombies se vuelven a oir
+barra de vida tipo zelda, 3 vidas, las flores ayuda a regenerar vida
+resaltar que hay plantas en el suelo
+Descansos entre oleadas
+Priorizar las cosas que hagan que quede claro el mensaje, Ej: tirar la lata y que cambie el mundo
+Hold de disparo del agua para que el enemigo desaparezca, que no se elimine de una
+UI de agua
+UI de vida
+UI de puntaje
+UI de oleada actual
+IA de enemigos
+Base narrativa, Mecanica, IA y UI	\
+Que el artista se enfoque en la cinematica inicial, despues se pued ever la pistola de agua, el material de agua, los enemigos
+2 programadores apra el personaje 
+2 personajes para la IA
+tener todo listo para el jueves para testear ese mismo dia ya rreglar cosas el viernes 
+blockout unreal plugin
