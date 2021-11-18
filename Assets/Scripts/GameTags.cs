@@ -4,5 +4,6 @@ public enum GameTags
     PlayerZone,
     ZombieStartPoint,
     PainUI,
-    Live
+    Live,
+    Zombie
 }
