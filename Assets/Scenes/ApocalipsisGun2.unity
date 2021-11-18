@@ -832,6 +832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94de58b181b794843af7857d5a86325c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  liveEmpty: {fileID: 0}
+  liveComplete: {fileID: 0}
 --- !u!1 &1803014242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1280,7 @@ GameObject:
   - component: {fileID: 2740055317821163855}
   - component: {fileID: 6548339543346445796}
   - component: {fileID: 8970280745568915595}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: landscape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
