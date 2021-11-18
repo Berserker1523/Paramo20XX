@@ -11,7 +11,7 @@ public class WaveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startPoints = GameObject.FindGameObjectsWithTag("ZombieStartPoint");
+        startPoints = GameObject.FindGameObjectsWithTag(GameTags.ZombieStartPoint.ToString());
         Invoke("SpawnZombies", timeBetweenSpawn);
     }
 
