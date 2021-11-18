@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     private int numberOfZombies = 10;
-    private int timeBetweenSpawn = 10;
+    private int timeBetweenSpawn = 1;
     private GameObject[] startPoints;
     [SerializeField] private GameObject zombie;
     // Start is called before the first frame update
