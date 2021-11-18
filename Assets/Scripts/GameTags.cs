@@ -5,5 +5,6 @@ public enum GameTags
     ZombieStartPoint,
     PainUI,
     Live,
+    WaterGunParticles,
     Zombie
 }
