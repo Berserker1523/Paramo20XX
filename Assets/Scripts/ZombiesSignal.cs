@@ -19,16 +19,15 @@ public class ZombiesSignal : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag.Equals(GameTags.Zombie.ToString()))
+        if (other.tag.Equals(GameTags.PlayerZone.ToString()))
         {
-            Vector3 positionZombie = other.transform.position;
-            Vector3 zombiePlayer = positionZombie - gameObject.transform.position;
-            Vector3 vectorPlayer = gameObject.transform.right;
-            float angle = Vector3.Angle(vectorPlayer, zombiePlayer);
+            Vector3 vectorPlayer = other.transform.position; 
+            Vector3 zombiePlayer = gameObject.transform.position- vectorPlayer;
+            Vector3 positionZombie = gameObject.transform.right;
+            float angle = Vector3.Angle(positionZombie, zombiePlayer);
             float y = radius * Mathf.Sin(Mathf.Deg2Rad*angle);
             float x = radius * Mathf.Cos(Mathf.Deg2Rad * angle);
-            Debug.Log($" x {x}");
-            Debug.Log($" y {y}");
+            Debug.Log($" x {x}, y {y}");
         }
     }
 }
