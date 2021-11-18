@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Apocalipsis zombies.unity
+    guid: 3839aebeba5dcef449acf0d22e90b052
+  - enabled: 1
+    path: Assets/Scenes/VidaNatural.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 289596dd10f29394691aa36559925ab2, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: acae01c687d4581428a87eb60ebb09be, type: 2}

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ZombieStartPoint
   - PlayerZone
+  - PainUI
+  - Live
   layers:
   - Default
   - TransparentFX

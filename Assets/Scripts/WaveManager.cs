@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    private int numberOfZombies = 10;
+    private int numberOfZombies = 1;
     private int timeBetweenSpawn = 10;
     private GameObject[] startPoints;
     [SerializeField] private GameObject zombie;
     // Start is called before the first frame update
     void Start()
     {
-        startPoints = GameObject.FindGameObjectsWithTag("ZombieStartPoint");
+        startPoints = GameObject.FindGameObjectsWithTag(GameTags.ZombieStartPoint.ToString());
         Invoke("SpawnZombies", timeBetweenSpawn);
     }
 

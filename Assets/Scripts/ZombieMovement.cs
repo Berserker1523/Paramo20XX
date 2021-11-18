@@ -10,7 +10,7 @@ public class ZombieMovement : MonoBehaviour
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        player = GameObject.FindGameObjectWithTag("PlayerZone");
+        player = GameObject.FindGameObjectWithTag(GameTags.PlayerZone.ToString());
         navMeshAgent.SetDestination(player.transform.position);
     }
 
@@ -22,7 +22,7 @@ public class ZombieMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("PlayerZone"))
+        if (other.gameObject.tag.Equals(GameTags.PlayerZone.ToString()))
         {
             navMeshAgent.isStopped = true;
         }
