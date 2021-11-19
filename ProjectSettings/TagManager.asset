@@ -6,6 +6,10 @@ TagManager:
   tags:
   - ZombieStartPoint
   - PlayerZone
+  - PainUI
+  - Live
+  - WaterGunParticles
+  - Zombie
   layers:
   - Default
   - TransparentFX
@@ -13,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - ZombieBody
+  - Floor
   - 
   - 
   - 

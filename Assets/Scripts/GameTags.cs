@@ -2,5 +2,9 @@ public enum GameTags
 {
     Player,
     PlayerZone,
-    ZombieStartPoint
+    ZombieStartPoint,
+    PainUI,
+    Live,
+    WaterGunParticles,
+    Zombie
 }

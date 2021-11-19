@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    private int numberOfZombies = 10;
+    private int numberOfZombies = 1;
     private int timeBetweenSpawn = 10;
     private GameObject[] startPoints;
     [SerializeField] private GameObject zombie;
