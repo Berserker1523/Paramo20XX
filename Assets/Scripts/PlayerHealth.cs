@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
         if (health == 0)
         {
             Debug.Log("Se murio :( ");
-            //SceneManager.LoadScene("VidaNatural");
+            SceneManager.LoadScene("VidaNaturalCinematic1");
         }
     }
 }

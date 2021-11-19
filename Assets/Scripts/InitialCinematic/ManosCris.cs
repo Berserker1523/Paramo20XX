@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ManosCris : MonoBehaviour
 {
     private Animator animator;
+    private bool a;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +18,26 @@ public class ManosCris : MonoBehaviour
         OVRInput.Update();
         bool primaryHandTriggerLTouch = OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch);
         bool primaryHandTriggerRTouch = OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
-        if (primaryHandTriggerLTouch)
+        if (primaryHandTriggerRTouch)
+        {
             animator.SetInteger("Choose", 1);
-        else if (primaryHandTriggerRTouch)
+            if(!a)
+            {
+                Invoke("GoToApocalipsis", 4);
+                a = true;
+            }
+            Debug.Log(1);
+        }
+            
+        else if (primaryHandTriggerLTouch)
+        {
             animator.SetInteger("Choose", 2);
+            Debug.Log(2);
+        }
+    }
+
+    private void GoToApocalipsis()
+    {
+        SceneManager.LoadScene("DialogosFuturo");
     }
 }

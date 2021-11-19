@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Intro : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class Intro : MonoBehaviour
             else if (currentTextIndex == texts.Count + 1)
             {
                 HideTextsExcept(-1);
+                SceneManager.LoadScene("VidaNaturalCinematic1");
             }
         }
     }

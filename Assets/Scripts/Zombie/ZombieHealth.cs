@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombieHealth : MonoBehaviour
 {
-    private float health = 3f;
+    private float health = 0.5f;
     private float hitTimer;
     public float HitTimer
     {

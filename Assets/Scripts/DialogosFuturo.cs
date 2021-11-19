@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class DialogosFuturo : MonoBehaviour
 {
     [SerializeField] private List<GameObject> texts;
@@ -31,6 +31,7 @@ public class DialogosFuturo : MonoBehaviour
             else if (currentTextIndex == texts.Count)
             {
                 HideTextsExcept(-1);
+                SceneManager.LoadScene("Apocalipsis");
             }
         }
     }
