@@ -8,17 +8,11 @@ public class WaveManager : MonoBehaviour
     private int timeBetweenSpawn = 1;
     private GameObject[] startPoints;
     [SerializeField] private GameObject zombie;
-    // Start is called before the first frame update
+
     void Start()
     {
         startPoints = GameObject.FindGameObjectsWithTag(GameTags.ZombieStartPoint.ToString());
         Invoke("SpawnZombies", timeBetweenSpawn);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void SpawnZombies()
@@ -28,7 +22,7 @@ public class WaveManager : MonoBehaviour
             return;
         
         for (int i = 0; i < startPoints.Length; i++)
-            Instantiate(zombie, startPoints[i].transform);
+            Instantiate(zombie, startPoints[i].transform.position, Quaternion.identity);
 
         numberOfZombies--;
 

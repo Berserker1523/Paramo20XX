@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZombiesSignal : MonoBehaviour
 {
-    private float radius = 0.3f;
+    private float radius = 0.2f;
     [SerializeField] private GameObject signal;
     private GameObject signalCanvas;
     private GameObject instantiatedArrow;
@@ -32,12 +32,11 @@ public class ZombiesSignal : MonoBehaviour
             Debug.Log(signalCanvas.transform);
             if (instantiatedArrow == null)
             {
-                instantiatedArrow = Instantiate(signal, signalCanvas.transform, false);
-                instantiatedArrow.transform.rotation = rotation;
-                instantiatedArrow.transform.position = new Vector3(x,  signalCanvas.transform.position.y-y, signalCanvas.transform.position.z);
+                instantiatedArrow = Instantiate(signal, signalCanvas.transform);
             }
-           
-            
+
+            instantiatedArrow.transform.localRotation = rotation;
+            instantiatedArrow.transform.localPosition = new Vector3(x, -y, 0);
         }
     }
 }
