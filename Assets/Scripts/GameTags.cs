@@ -6,5 +6,7 @@ public enum GameTags
     PainUI,
     Live,
     WaterGunParticles,
-    Zombie
+    Zombie,
+    SignalCanvas,
+    Advertisement
 }
