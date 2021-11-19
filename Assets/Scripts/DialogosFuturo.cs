@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Intro : MonoBehaviour
+public class DialogosFuturo : MonoBehaviour
 {
     [SerializeField] private List<GameObject> texts;
     private float time;
@@ -20,7 +20,7 @@ public class Intro : MonoBehaviour
     void Update()
     {
         UpdateTime();
-        if (time >= 3.0f)
+        if (time >= 6.0f)
         {
             time = 0;
             currentTextIndex += 1;
@@ -28,7 +28,7 @@ public class Intro : MonoBehaviour
             {
                 HideTextsExcept(currentTextIndex);
             }
-            else if (currentTextIndex == texts.Count + 1)
+            else if (currentTextIndex == texts.Count)
             {
                 HideTextsExcept(-1);
             }
