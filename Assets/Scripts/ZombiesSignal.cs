@@ -4,30 +4,40 @@ using UnityEngine;
 
 public class ZombiesSignal : MonoBehaviour
 {
-    private float radius = 2;
-    // Start is called before the first frame update
+    private float radius = 0.3f;
+    [SerializeField] private GameObject signal;
+    private GameObject signalCanvas;
+    private GameObject instantiatedArrow;
+    private bool done = false;
+    // Update is called once per frame
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        signalCanvas = GameObject.FindGameObjectWithTag(GameTags.SignalCanvas.ToString());
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag.Equals(GameTags.PlayerZone.ToString()))
+        if (other.tag.Equals(GameTags.Advertisement.ToString()))
         {
-            Vector3 vectorPlayer = other.transform.position; 
-            Vector3 zombiePlayer = gameObject.transform.position- vectorPlayer;
-            Vector3 positionZombie = gameObject.transform.right;
-            float angle = Vector3.Angle(positionZombie, zombiePlayer);
+            Vector3 playerPosition = other.transform.position; 
+            Vector3 playerDirection = gameObject.transform.position - playerPosition;
+            Vector3 playerRightVector = other.transform.right;
+            float angle = Vector3.SignedAngle(playerRightVector, playerDirection,Vector3.up);
+            
+            Debug.Log($"Angle {angle}");
             float y = radius * Mathf.Sin(Mathf.Deg2Rad*angle);
             float x = radius * Mathf.Cos(Mathf.Deg2Rad * angle);
             Debug.Log($" x {x}, y {y}");
+            Quaternion rotation = Quaternion.Euler(0, 0, -angle);
+            Debug.Log(signalCanvas.transform);
+            if (instantiatedArrow == null)
+            {
+                instantiatedArrow = Instantiate(signal, signalCanvas.transform, false);
+                instantiatedArrow.transform.rotation = rotation;
+                instantiatedArrow.transform.position = new Vector3(x,  signalCanvas.transform.position.y-y, signalCanvas.transform.position.z);
+            }
+           
+            
         }
     }
 }
