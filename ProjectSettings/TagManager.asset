@@ -12,6 +12,8 @@ TagManager:
   - Zombie
   - SignalCanvas
   - Advertisement
+  - Text1
+  - Instructions
   layers:
   - Default
   - TransparentFX
@@ -24,10 +26,6 @@ TagManager:
   - ZombieHump
   - Zombie
   - PlayerZone
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

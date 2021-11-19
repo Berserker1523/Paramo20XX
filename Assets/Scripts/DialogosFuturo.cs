@@ -20,7 +20,7 @@ public class DialogosFuturo : MonoBehaviour
     void Update()
     {
         UpdateTime();
-        if (time >= 6.0f)
+        if (time >= 7.0f)
         {
             time = 0;
             currentTextIndex += 1;

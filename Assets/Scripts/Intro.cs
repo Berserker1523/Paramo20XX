@@ -21,7 +21,7 @@ public class Intro : MonoBehaviour
     void Update()
     {
         UpdateTime();
-        if (time >= 3.0f)
+        if (time >= 3.5f)
         {
             time = 0;
             currentTextIndex += 1;
