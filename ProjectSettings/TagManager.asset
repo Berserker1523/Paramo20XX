@@ -20,6 +20,10 @@ TagManager:
   - Water
   - UI
   - ZombieBody
+  - Floor
+  - ZombieHump
+  - Zombie
+  - PlayerZone
   - 
   - 
   - 

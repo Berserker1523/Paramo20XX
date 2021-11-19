@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: 2
-  water: {fileID: 0}
+  water: {fileID: 6936542253720932415}
 --- !u!1 &4048146436167839931
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,5 +188,10 @@ PrefabInstance:
 --- !u!4 &6936542253720932385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6779384375370246817, guid: 1c9eca2966371154784f9187bd82200b, type: 3}
+  m_PrefabInstance: {fileID: 4491982488616368768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6936542253720932415 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6779384375370246847, guid: 1c9eca2966371154784f9187bd82200b, type: 3}
   m_PrefabInstance: {fileID: 4491982488616368768}
   m_PrefabAsset: {fileID: 0}

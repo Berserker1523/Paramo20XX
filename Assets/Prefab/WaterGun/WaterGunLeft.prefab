@@ -137,7 +137,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6779384375370246816, guid: 1c9eca2966371154784f9187bd82200b, type: 3}
       propertyPath: m_Name
-      value: Particle System
+      value: WaterParticle
       objectReference: {fileID: 0}
     - target: {fileID: 6779384375370246817, guid: 1c9eca2966371154784f9187bd82200b, type: 3}
       propertyPath: m_RootOrder

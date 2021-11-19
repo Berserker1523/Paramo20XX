@@ -12,9 +12,9 @@ public class ZombieHitCollider : MonoBehaviour
         health = GetComponentInParent<ZombieHealth>();
     }
 
-
     private void OnParticleCollision(GameObject other)
     {
+        Debug.Log($"OnParticleCollision {gameObject.name}");
         if (other.tag.Equals(GameTags.WaterGunParticles.ToString()))
             health.HitTimer += Time.deltaTime * (isHump ? 2 : 1);
     }
