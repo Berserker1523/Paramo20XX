@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 public class ZombieMovement : MonoBehaviour
@@ -9,15 +7,9 @@ public class ZombieMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponentInParent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag(GameTags.PlayerZone.ToString());
         navMeshAgent.SetDestination(player.transform.position);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)
