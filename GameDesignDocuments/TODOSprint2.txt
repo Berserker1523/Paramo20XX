@@ -1,0 +1,28 @@
+cambiar el texto de la escena de cinematica*
+altura del piso en las escenas de textos*
+Ajustar la velocidad de los crédito*
+hacer que pueda ir a los creditos si elige no arrojar la botella*
+Hacer que de los creditos vaya al inicio*
+ajustar el rango del detector de enemigos*
+fade in de dialogos futuro*
+fade in de apocalipsis*
+ajustar el ancho del agua*
+mensaje al final del juego*
+actualizar itchio, poner que somos colombianos
+vibracion al apuntar
+sonidos
+
+sistema de oleadas y puntaje:
+
+En cada oleada hay un numero de zombies a matar
+pero estos zombies no deben salir todos de una, deben salir poco a poco
+Entre mas alta es el numero de oleada, deben salir mas zombies, y deben salir mas zombies de golpe
+
+animacion de caminar de los zombies
+animacion de atacar
+signaling de que el jugador le esta haciendo daño
+signaling de que se le puede disaprar ala jroba
+signaling (flecha roja) de donde estan atacando al jugador
+
+Preguntarle al usuarilo estrella que otros juegos juega en VR y porque cree que no son accesibles para él
+Decirle al profesor que nos de mas tiempo para que el juego sea mas chevere y asi darle una mejor experiencia al usuario estrella

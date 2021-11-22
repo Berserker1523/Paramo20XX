@@ -8,5 +8,7 @@ public enum GameTags
     WaterGunParticles,
     Zombie,
     SignalCanvas,
-    Advertisement
+    Advertisement,
+    FadeCanvas,
+    SceneChanger
 }

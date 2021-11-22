@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -11,19 +8,32 @@ public class PlayerHealth : MonoBehaviour
     private GameObject[] lives;
     private int health = 3;
 
+    private SceneChanger sceneChanger;
+    private GameObject painUI;
+
     private void Start()
     {
         lives = GameObject.FindGameObjectsWithTag(GameTags.Live.ToString());
+        sceneChanger = GameObject.FindGameObjectWithTag(GameTags.SceneChanger.ToString()).GetComponent<SceneChanger>();
+        painUI = GameObject.FindGameObjectWithTag(GameTags.PainUI.ToString());
     }
     public void Hurt()
     {
         health--;
+        painUI.GetComponent<Image>().enabled = true;
+        Invoke("StopPainUI", 0.3f);
         lives[health].GetComponent<Image>().sprite = liveEmpty;
 
         if (health == 0)
         {
             Debug.Log("Se murio :( ");
-            SceneManager.LoadScene("VidaNaturalCinematic1");
+            sceneChanger.ChangeToScene(SceneChanger.SceneName.Message, FadeCanvasController.FadeAnimatorParameter.FadeInWhite);
         }
+    }
+
+    private void StopPainUI()
+    {
+        Debug.Log($"StopPainUI");
+        painUI.GetComponent<Image>().enabled = false;
     }
 }

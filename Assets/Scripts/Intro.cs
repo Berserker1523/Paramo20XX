@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Intro : MonoBehaviour
 {
@@ -9,12 +7,15 @@ public class Intro : MonoBehaviour
     private float time;
     private int currentTextIndex;
 
+    private SceneChanger sceneChanger;
+
     // Start is called before the first frame update
     void Start()
     {
         currentTextIndex = 0;
         time = 0.0f;
         HideTextsExcept(currentTextIndex);
+        sceneChanger = GameObject.FindGameObjectWithTag(GameTags.SceneChanger.ToString()).GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
@@ -32,7 +33,7 @@ public class Intro : MonoBehaviour
             else if (currentTextIndex == texts.Count + 1)
             {
                 HideTextsExcept(-1);
-                SceneManager.LoadScene("VidaNaturalCinematic1");
+                sceneChanger.ChangeToScene(SceneChanger.SceneName.VidaNaturalCinematic1, FadeCanvasController.FadeAnimatorParameter.FadeInWhite);
             }
         }
     }

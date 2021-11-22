@@ -1,29 +1,32 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ManosCris : MonoBehaviour
 {
     private Animator animator;
     private GameObject text;
     private bool a;
+    private bool b;
     private float i = 0f;
+
+    private SceneChanger sceneChanger;
+
     // Start is called before the first frame update
     void Start()
     {
         text = GameObject.FindGameObjectWithTag("Instructions");
         text.SetActive(false);
         animator = GetComponent<Animator>();
-        
+        sceneChanger = GameObject.FindGameObjectWithTag(GameTags.SceneChanger.ToString()).GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
     void Update()
     {
         i+=Time.deltaTime;
-        Debug.Log(i);
+        //Debug.Log(i);
         if (i >= 15)
         {
-            Debug.Log("Entro");
+            //Debug.Log("Entro");
             text.SetActive(true);
         }
         OVRInput.Update();
@@ -43,12 +46,22 @@ public class ManosCris : MonoBehaviour
         else if (primaryHandTriggerLTouch)
         {
             animator.SetInteger("Choose", 2);
+            if (!b)
+            {
+                Invoke("GoToCredits", 10);
+                b = true;
+            }
             Debug.Log(2);
         }
     }
 
     private void GoToApocalipsis()
     {
-        SceneManager.LoadScene("DialogosFuturo");
+        sceneChanger.ChangeToScene(SceneChanger.SceneName.DialogosFuturo, FadeCanvasController.FadeAnimatorParameter.FadeInBlack);
+    }
+
+    private void GoToCredits()
+    {
+        sceneChanger.ChangeToScene(SceneChanger.SceneName.Creditos, FadeCanvasController.FadeAnimatorParameter.FadeInBlack);
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombiesSignal : MonoBehaviour
@@ -38,5 +36,10 @@ public class ZombiesSignal : MonoBehaviour
             instantiatedArrow.transform.localRotation = rotation;
             instantiatedArrow.transform.localPosition = new Vector3(x, -y, 0);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Destroy(instantiatedArrow);
     }
 }

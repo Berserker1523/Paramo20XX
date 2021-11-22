@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Apocalipsis.unity
     guid: 5213c9cb69e4eab4db022e2c6a1bef0a
+  - enabled: 1
+    path: Assets/Scenes/Message.unity
+    guid: 12ce7db19f4cd9547b0c784eaa6afe15
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 3362c8f73c6833649be2bcb091d94375
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 289596dd10f29394691aa36559925ab2, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: acae01c687d4581428a87eb60ebb09be, type: 2}

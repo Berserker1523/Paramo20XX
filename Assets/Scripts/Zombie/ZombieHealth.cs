@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ZombieHealth : MonoBehaviour
 {
-    private float health = 0.5f;
+    private float health = 1.5f;
     private float hitTimer;
     public float HitTimer
     {

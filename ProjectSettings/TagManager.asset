@@ -14,6 +14,8 @@ TagManager:
   - Advertisement
   - Text1
   - Instructions
+  - FadeCanvas
+  - SceneChanger
   layers:
   - Default
   - TransparentFX

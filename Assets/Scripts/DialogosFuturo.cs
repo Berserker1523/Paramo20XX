@@ -8,12 +8,15 @@ public class DialogosFuturo : MonoBehaviour
     private float time;
     private int currentTextIndex;
 
+    private SceneChanger sceneChanger;
+
     // Start is called before the first frame update
     void Start()
     {
         currentTextIndex = 0;
         time = 0.0f;
         HideTextsExcept(currentTextIndex);
+        sceneChanger = GameObject.FindGameObjectWithTag(GameTags.SceneChanger.ToString()).GetComponent<SceneChanger>();
     }
 
     // Update is called once per frame
@@ -31,7 +34,7 @@ public class DialogosFuturo : MonoBehaviour
             else if (currentTextIndex == texts.Count)
             {
                 HideTextsExcept(-1);
-                SceneManager.LoadScene("Apocalipsis");
+                sceneChanger.ChangeToScene(SceneChanger.SceneName.Apocalipsis, FadeCanvasController.FadeAnimatorParameter.FadeInWhite);
             }
         }
     }

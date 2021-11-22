@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombieHitCollider : MonoBehaviour
@@ -14,7 +12,6 @@ public class ZombieHitCollider : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log($"OnParticleCollision {gameObject.name}");
         if (other.tag.Equals(GameTags.WaterGunParticles.ToString()))
             health.HitTimer += Time.deltaTime * (isHump ? 2 : 1);
     }
