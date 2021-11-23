@@ -11,6 +11,7 @@ public class WaterGun : MonoBehaviour
     private int zombieLayerMask = (1 << (int)GameLayers.ZombieBody) | (1 << (int)GameLayers.ZombieHump);
 
     private bool aimVibrationEnabled;
+    private bool hitByZombieVibrationEnabled;
 
     private void Update()
     {
@@ -19,16 +20,15 @@ public class WaterGun : MonoBehaviour
         if (indexTrigger)
         {
             water.Play();
-            if(!aimVibrationEnabled)
+            if(!aimVibrationEnabled && !hitByZombieVibrationEnabled)
                 EnableVibration(0.25f);
         }
         else
         {
             water.Stop();
-            if (!aimVibrationEnabled)
+            if (!aimVibrationEnabled && !hitByZombieVibrationEnabled)
                 DisableVibration();
         }
-            
     }
 
     private void FixedUpdate()
@@ -39,6 +39,8 @@ public class WaterGun : MonoBehaviour
             if (hit.collider.gameObject != hitGameObject)
             {
                 hitGameObject = hit.collider.gameObject;
+                if (hitByZombieVibrationEnabled)
+                    return;
                 if ((1 << hitGameObject.layer & 1 << (int)GameLayers.ZombieHump) != 0)
                 {
                     EnableAimVibration(1f);
@@ -54,10 +56,24 @@ public class WaterGun : MonoBehaviour
         else
         {
             hitGameObject = null;
+            if (hitByZombieVibrationEnabled)
+                return;
             DisableVibration();
         }
     }
-    
+
+    public void EnableHitByZombieVibration(float value)
+    {
+        hitByZombieVibrationEnabled = true;
+        EnableVibration(value);
+    }
+
+    public void DisableHitByZombieVibration()
+    {
+        hitByZombieVibrationEnabled = false;
+        DisableVibration();
+    }
+
     private void EnableAimVibration(float value)
     {
         aimVibrationEnabled = true;

@@ -10,17 +10,23 @@ public class PlayerHealth : MonoBehaviour
 
     private SceneChanger sceneChanger;
     private GameObject painUI;
+    private WaterGun[] waterGuns;
 
     private void Start()
     {
         lives = GameObject.FindGameObjectsWithTag(GameTags.Live.ToString());
         sceneChanger = GameObject.FindGameObjectWithTag(GameTags.SceneChanger.ToString()).GetComponent<SceneChanger>();
         painUI = GameObject.FindGameObjectWithTag(GameTags.PainUI.ToString());
+        waterGuns = FindObjectsOfType(typeof(WaterGun)) as WaterGun[];
     }
     public void Hurt()
     {
-        health--;
+        //health--;
         painUI.GetComponent<Image>().enabled = true;
+        for(int i= 0; i < waterGuns.Length; i++)
+        {
+            waterGuns[i].EnableHitByZombieVibration(1f);
+        }
         Invoke("StopPainUI", 0.3f);
         lives[health].GetComponent<Image>().sprite = liveEmpty;
 
@@ -35,5 +41,9 @@ public class PlayerHealth : MonoBehaviour
     {
         //Debug.Log($"StopPainUI");
         painUI.GetComponent<Image>().enabled = false;
+        for (int i = 0; i < waterGuns.Length; i++)
+        {
+            waterGuns[i].DisableHitByZombieVibration();
+        }
     }
 }
