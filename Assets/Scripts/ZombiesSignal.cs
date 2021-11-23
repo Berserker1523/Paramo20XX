@@ -22,12 +22,12 @@ public class ZombiesSignal : MonoBehaviour
             Vector3 playerRightVector = other.transform.right;
             float angle = Vector3.SignedAngle(playerRightVector, playerDirection,Vector3.up);
             
-            Debug.Log($"Angle {angle}");
+            //Debug.Log($"Angle {angle}");
             float y = radius * Mathf.Sin(Mathf.Deg2Rad*angle);
             float x = radius * Mathf.Cos(Mathf.Deg2Rad * angle);
-            Debug.Log($" x {x}, y {y}");
+            //Debug.Log($" x {x}, y {y}");
             Quaternion rotation = Quaternion.Euler(0, 0, -angle);
-            Debug.Log(signalCanvas.transform);
+            //Debug.Log(signalCanvas.transform);
             if (instantiatedArrow == null)
             {
                 instantiatedArrow = Instantiate(signal, signalCanvas.transform);

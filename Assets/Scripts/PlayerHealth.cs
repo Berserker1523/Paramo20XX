@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void StopPainUI()
     {
-        Debug.Log($"StopPainUI");
+        //Debug.Log($"StopPainUI");
         painUI.GetComponent<Image>().enabled = false;
     }
 }

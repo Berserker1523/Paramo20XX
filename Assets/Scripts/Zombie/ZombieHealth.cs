@@ -10,7 +10,7 @@ public class ZombieHealth : MonoBehaviour
         set
         {
             hitTimer = value;
-            Debug.Log(HitTimer);
+            //Debug.Log(HitTimer);
             if (hitTimer > health)
                 Destroy(gameObject);
         }
