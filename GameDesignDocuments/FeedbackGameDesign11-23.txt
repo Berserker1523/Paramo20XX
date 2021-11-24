@@ -1,0 +1,39 @@
+el agua fundamemralñ
+cristalinsa y luego sucia
+hubieramos hecho arboles sencillos
+buscar referencias de carteles de no acampsr
+cartes de no tirar basura
+resaltar elementos clave del mapa
+fakear la animacion de tirar ls botella para que jugador haga un movimiento
+texto en parte baja o alta nunca centro, poner outlining y color dependiendo del suelo o cielo
+no se nota que el segundo escenario es el mimo
+desy¿tacan mucho los úntos blancos, basura, barriles, pareciera que fuera a pasar algo
+hacer los zombies mas notorios en el escenario
+reslatar mas la joroba con otro color
+que el zombi se encorbe para que detaque mas
+altura zombies
+elementos clave que permitan entender que este es el otrpo mapa pero mal, arboles, bote
+resaltar las puertas
+el agua deberia ser como la basura blanca
+flas cuando sale un zombie
+hacer caminos variabilidad del mapa, caminos de zombies
+que el signaling de la pistola se ponga rojo al cruzarse con un zombie, el arma no tiene que ver con la joroba, la joroba deberia ser identificable independientemente de esta
+
+arte: centrarse en lo interactivo
+hacer que lo demas no resalte tanto, que se mezcle con el escenario
+el jugador siempre va a hacer algo con lo que resalte
+si se van a poner los charcos, tienen que resaltar
+que los dos escenarios se sientan unidos entre si
+Vida en la parte superior, mas pequeña pero que resalta -> trabajo de colores que la UI se vea independientemente del mapa
+La UI tiene que resaltar que se perdio una vida, por ejemplo: shake de los planetas al perder una vida
+Vida en la aprte izquierda y puntaje a la derecha, en la misma linea horizontal
+
+posicion del jugador mas arriba
+UI del puntaje
+
+animaciones de los zombies -> zombie encorvado con una joroba
+poner mas basura en el mapa
+
+1 solo nivel
+que el juego no solo funcione a nivel tecnico, sino tmb ver cosas de arte, que funcionen entre si
+por que deberian jugar este juego y no otro que se le parezca?

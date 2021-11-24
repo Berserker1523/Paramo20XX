@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour
@@ -11,7 +12,7 @@ public class WaveManager : MonoBehaviour
     void Start()
     {
         startPoints = GameObject.FindGameObjectsWithTag(GameTags.ZombieStartPoint.ToString());
-        Invoke("SpawnZombies", timeBetweenSpawn);
+        Invoke("SpawnZombies", 15);
     } 
 
     private void SpawnZombies()
@@ -21,12 +22,20 @@ public class WaveManager : MonoBehaviour
             round += 1;
             numberOfZombies = round;
         }
-        
-        for (int i = 0; i < startPoints.Length; i++)
-            Instantiate(zombie, startPoints[i].transform.position, Quaternion.identity);
+
+        StartCoroutine(ZombieSpawn());
 
         numberOfZombies--;
 
         Invoke("SpawnZombies", timeBetweenSpawn);
+    }
+
+    private IEnumerator ZombieSpawn()
+    {
+        for (int i = 0; i < startPoints.Length; i++)
+        {
+            yield return new WaitForSeconds(5f);
+            Instantiate(zombie, startPoints[i].transform.position, Quaternion.identity);
+        }
     }
 }

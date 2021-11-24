@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Hurt()
     {
-        //health--;
+        health--;
         painUI.GetComponent<Image>().enabled = true;
         for(int i= 0; i < waterGuns.Length; i++)
         {
