@@ -31,9 +31,15 @@ Vida en la aprte izquierda y puntaje a la derecha, en la misma linea horizontal
 posicion del jugador mas arriba
 UI del puntaje
 
+
+
 animaciones de los zombies -> zombie encorvado con una joroba
 poner mas basura en el mapa
 
 1 solo nivel
 que el juego no solo funcione a nivel tecnico, sino tmb ver cosas de arte, que funcionen entre si
 por que deberian jugar este juego y no otro que se le parezca?
+
+
+Fijarse en el pacing del juego, que haya momentos de intensidad y de calma
+variar los patrones de salida de enemigos, por ejemplo que en una oleada salgan muchos zombies de un solo lugar
