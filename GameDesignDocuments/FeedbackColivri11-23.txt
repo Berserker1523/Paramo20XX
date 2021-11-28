@@ -1,8 +1,9 @@
 ponerle boton de skip
 signaling a la joroba
-decirle que no se puede mover los brazos
-loz zombies se ven muy grandes
-no es claro que si bota la botella en la basura se termina el juego
-no es claro que es el mismo páramo
+decirle que no se puede mover los brazos -> cambiar manos por brazos
+loz zombies se ven muy grandes -> Ajustar lel alto de la camara
+no es claro que si bota la botella en la basura se termina el juego -> ponerle textura a la caneca que diga salir
+no es claro que es el mismo páramo -> 
 la gente se asusta con el sonido del zombie
-saber cual zombie esta mas cerca
+saber cual zombie esta mas cerca -> cambiarle el color a la flecha
+->
