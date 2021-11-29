@@ -1,0 +1,11 @@
+Voces (radio, walkie-talkie)
+tutorial antes d elas hordas, -> un priemr zombie que se acerca al jugador
+y explicar nuevas dinamicas en momentos de calma
+sonidos
+ajustar la posicion de las pistolas
+poder saltar los textos
+quitar el piso en las escenas de dialogos
+ajustar el sonido de los zombies para que sea mas alto segun la proximidad
+ponerle fisicas a ls pistola de agua
+particuals cuando el agua impacta a los zombies
+seleccion de armas

@@ -1,22 +1,22 @@
-el agua es fundamental
+el agua es fundamental -> se debe ver cristalina
 cristalinsa y luego sucia
 hubieramos hecho arboles sencillos
-buscar referencias de carteles de no acampsr
+buscar referencias de carteles de no acampsr -> ponerle texto
 cartes de no tirar basura
-resaltar elementos clave del mapa
+resaltar elementos clave del mapa -> ponerle un outline a la basura y al agua
 fakear la animacion de tirar ls botella para que jugador haga un movimiento
 texto en parte baja o alta nunca centro, poner outlining y color dependiendo del suelo o cielo
-no se nota que el segundo escenario es el mimo
-desy¿tacan mucho los úntos blancos, basura, barriles, pareciera que fuera a pasar algo
-hacer los zombies mas notorios en el escenario
-reslatar mas la joroba con otro color
-que el zombi se encorbe para que detaque mas
-altura zombies
-elementos clave que permitan entender que este es el otrpo mapa pero mal, arboles, bote
-resaltar las puertas
-el agua deberia ser como la basura blanca
-flas cuando sale un zombie
-hacer caminos variabilidad del mapa, caminos de zombies
+no se nota que el segundo escenario es el mismo -> texturas de carpa, el letrero, la caneca, modificar los frailejones, poner minas como montañas antes
+desy¿tacan mucho los úntos blancos, basura, barriles, pareciera que fuera a pasar algo -> si va a pasar algo (los barriles explotan en 1 metro de radio) hacer que la basura no parezca mercurio
+hacer los zombies mas notorios en el escenario -> revisar animaciones, cambiar textura del suelo
+reslatar mas la joroba con otro color -> yasta
+que el zombi se encorbe para que destaque mas -> yasta
+altura zombies -> altura del piso
+elementos clave que permitan entender que este es el otrpo mapa pero mal, arboles, bote -> ya
+resaltar las puertas -> outine
+el agua deberia ser como la basura blanca -> unificar texturas
+flash cuando sale un zombie -> particle system cuando spawnean zombies
+hacer caminos variabilidad del mapa, caminos de zombies -> stand by
 que el signaling de la pistola se ponga rojo al cruzarse con un zombie, el arma no tiene que ver con la joroba, la joroba deberia ser identificable independientemente de esta
 
 arte: centrarse en lo interactivo
