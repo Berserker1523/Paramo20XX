@@ -16,6 +16,7 @@ TagManager:
   - Instructions
   - FadeCanvas
   - SceneChanger
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

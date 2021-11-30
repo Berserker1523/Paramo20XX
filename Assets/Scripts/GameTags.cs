@@ -10,5 +10,6 @@ public enum GameTags
     SignalCanvas,
     Advertisement,
     FadeCanvas,
-    SceneChanger
+    SceneChanger,
+    ScoreManager
 }

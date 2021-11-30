@@ -1,41 +1,91 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    private int numberOfZombies = 1;
-    private int timeBetweenSpawn = 15;
-    private int round = 1;
-    private GameObject[] startPoints;
     [SerializeField] private GameObject zombie;
+
+    private int numberOfZombiesToSpawnInEachGateThisRound = 1;
+    private int numberOfZombiesToSpawnInThisRound;
+    private int timeBetweenRounds = 10;
+    private int currentRound = 1;
+    private float waitTimeToSpawnAmongGates = 7f;
+    private bool currentRoundFinished = false;
+
+    private HordeManager hordeManager;
+    private GameObject[] startPoints;
+
+    private List<GameObject> instantiatedZombies = new List<GameObject>();
 
     void Start()
     {
+        hordeManager = FindObjectOfType<HordeManager>();
+        hordeManager.AddHorde();
         startPoints = GameObject.FindGameObjectsWithTag(GameTags.ZombieStartPoint.ToString());
-        Invoke("SpawnZombies", 15);
-    } 
+        Invoke("SpawnZombies", 10);
+        numberOfZombiesToSpawnInThisRound = numberOfZombiesToSpawnInEachGateThisRound * startPoints.Length;
+    }
+
+    private void Update()
+    {
+        if(currentRoundFinished && AllZombiesAreDead())
+        {
+            hordeManager.AddHorde();
+            currentRound += 1;
+            numberOfZombiesToSpawnInEachGateThisRound = currentRound;
+            waitTimeToSpawnAmongGates = waitTimeToSpawnAmongGates - 1 < 2 ? 2 : waitTimeToSpawnAmongGates - 1;
+            currentRoundFinished = false;
+            numberOfZombiesToSpawnInThisRound = numberOfZombiesToSpawnInEachGateThisRound * startPoints.Length;
+            Invoke("SpawnZombies", timeBetweenRounds);
+        }
+    }
 
     private void SpawnZombies()
     {
-        if (numberOfZombies <= 0)
+        if (numberOfZombiesToSpawnInThisRound <= 0)
         {
-            round += 1;
-            numberOfZombies = round;
+            currentRoundFinished = true;
+            return;
         }
 
         StartCoroutine(ZombieSpawn());
-
-        numberOfZombies--;
-
-        Invoke("SpawnZombies", timeBetweenSpawn);
     }
+    int i;
+    int k;
+    int z;
+    int j;
 
     private IEnumerator ZombieSpawn()
     {
-        for (int i = 0; i < startPoints.Length; i++)
+        for (i = 0; i < startPoints.Length; i++)
         {
-            yield return new WaitForSeconds(5f);
-            Instantiate(zombie, startPoints[i].transform.position, Quaternion.identity);
+            k = Random.Range(0, startPoints.Length);
+            z = Random.Range(1, numberOfZombiesToSpawnInEachGateThisRound + 1);
+            for(j = 0; j < z; j++)
+            {
+                instantiatedZombies.Add(Instantiate(zombie, startPoints[k].transform.position, Quaternion.identity));
+                numberOfZombiesToSpawnInThisRound--;
+                if (numberOfZombiesToSpawnInThisRound <= 0)
+                {
+                    currentRoundFinished = true;
+                    StopAllCoroutines();
+                }
+                yield return new WaitForSeconds(2);
+            }
+            yield return new WaitForSeconds(waitTimeToSpawnAmongGates);
         }
+        Invoke("SpawnZombies", waitTimeToSpawnAmongGates);
+    }
+
+    private bool AllZombiesAreDead()
+    {
+        foreach(GameObject zombie in instantiatedZombies)
+        {
+            if (zombie != null)
+                return false;
+        }
+        instantiatedZombies.Clear();
+        return true;
     }
 }
