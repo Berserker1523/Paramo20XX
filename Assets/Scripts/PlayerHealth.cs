@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class PlayerHealth : MonoBehaviour
         }
         Invoke("StopPainUI", 0.3f);
         lives[health].GetComponent<Image>().sprite = liveEmpty;
+        Debug.Log($"DOPunchPosition {transform.up.normalized * 0.1f}");
+        lives[health].transform.DOPunchPosition(transform.up.normalized * 0.15f, 1);
 
         if (health == 0)
         {
