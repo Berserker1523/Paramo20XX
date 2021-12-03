@@ -1,0 +1,5 @@
+Hacer que los zombies salgan de varias puertas a la vez
+variar la velocidad de los zombies
+ponerle animaciones
+poner un icono de una cara de zombie en el puntaje
+hacer que el numero de la oleada aparezca en el centro cuando este cambiando y luego desaparezca

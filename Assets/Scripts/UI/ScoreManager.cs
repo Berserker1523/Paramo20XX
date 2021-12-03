@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<TMP_Text>();
-        Invoke("Asd", 2);
+        //Invoke("Asd", 2);
     }
 
     private void Asd()
