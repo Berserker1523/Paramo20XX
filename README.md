@@ -17,8 +17,6 @@ El juego consiste en la personificación de Cris. Un turista de la actualidad qu
 ## Tecnologías utilizadas
 #### Unity: 
 Motor de videojuego multiplataforma creado por Unity Technologies. Unity está disponible como plataforma de desarrollo para Microsoft Windows, Mac OS, Linux. 
-#### Twine: 
-Twine es una herramienta gratuita y de código abierto creada por Chris Klimas para hacer ficción interactiva en forma de páginas web. Está disponible en Mac OS X, Windows y Linux.
 #### Oculus VR: 
 Documentación de oculus VR y unity, disponible en https://docs.unity3d.com/es/530/Manual/VRDevices-Oculus.html
 #### Jira
