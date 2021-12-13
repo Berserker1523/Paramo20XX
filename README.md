@@ -23,10 +23,6 @@ Documentación de oculus VR y unity, disponible en https://docs.unity3d.com/es/5
 Jira es una herramienta en línea para la administración de tareas de un proyecto, el seguimiento de errores e incidencias y para la gestión operativa de proyectos.
 #### Blender
 Blender es un programa informático multiplataforma, dedicado especialmente al modelado, iluminación, renderizado, la animación y creación de gráficos tridimensionales.
-### Recursos utilizados
-Tutorial de twine
-https://www.youtube.com/watch?v=nSQ2n6drJHU
-https://www.youtube.com/watch?v=_ee5ZgLKLbI
 
 ## Instrucciones de descarga del código para desarrollo
 
