@@ -8,6 +8,8 @@ Además del hecho de hacer el juego, también se planteó una investigación sob
 ## ¿Cómo funciona páramo 20XX?
 El juego consiste en la personificación de Cris. Un turista de la actualidad que decide acampar ilegalmente en el páramo de chingaza. El juego empieza con la decisión de Cris de botar su botella de agua al nacimiento de agua o a la caneca. Cuando lo bota al nacimiento, Cris se transporta a un futuro apocaliptico en donde debe enfrentarse con Cactoides que quieren matarlo, y lo unico que tiene para defenderse son dos pistolas de agua. En la vista el usuario ve un indicador cada vez que un cactoide se acerca. Cuando un cactoide ataca al usuario se le quita una vida, cuando se acaban las 3 vidas, pierde el juego.
 ##Preview
+![MxHxpH](https://user-images.githubusercontent.com/60227230/145746306-2f85621b-7f7d-476b-9195-ae2235b630d4.png)
+![qi4zhW](https://user-images.githubusercontent.com/60227230/145746324-2a268b7e-e1cd-41e2-8c99-d7804b5d1007.png)
 
 ## Tecnologías utilizadas
 #### Unity: 
@@ -41,3 +43,6 @@ https://www.youtube.com/watch?v=_ee5ZgLKLbI
 1. Transfiera el archivo ejecutable al oculus
 1. Abra el APK desde el dispositivo
 1. Disfrute la experiencia
+
+## Link itch.io
+https://lhcabra.itch.io/paramo-20xx
