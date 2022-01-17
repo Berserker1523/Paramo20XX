@@ -51,6 +51,7 @@ public class WaveManager : MonoBehaviour
 
         StartCoroutine(ZombieSpawn());
     }
+
     int i;
     int k;
     int z;
@@ -64,14 +65,15 @@ public class WaveManager : MonoBehaviour
             z = Random.Range(1, numberOfZombiesToSpawnInEachGateThisRound + 1);
             for(j = 0; j < z; j++)
             {
-                instantiatedZombies.Add(Instantiate(zombie, startPoints[k].transform.position, Quaternion.identity));
+                Vector3 gatePosition = startPoints[k].transform.position;
+                instantiatedZombies.Add(Instantiate(zombie, new Vector3(Random.Range(gatePosition.x - 2f, gatePosition.x + 2f), gatePosition.y, Random.Range(gatePosition.z - 2f, gatePosition.z + 2f)), Quaternion.identity));
                 numberOfZombiesToSpawnInThisRound--;
                 if (numberOfZombiesToSpawnInThisRound <= 0)
                 {
                     currentRoundFinished = true;
                     StopAllCoroutines();
                 }
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(0.5f);
             }
             yield return new WaitForSeconds(waitTimeToSpawnAmongGates);
         }
