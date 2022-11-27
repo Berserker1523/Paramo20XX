@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a24e64961e81a479ad6ac47965020a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombie: {fileID: 9038001301941168442, guid: 2d91afdcd2c910646a591e21e6db8752, type: 3}
+  zombie: {fileID: 9206714012595414402, guid: 437514f8abee2cf4eac098d8633a0f86, type: 3}
 --- !u!4 &117028885
 Transform:
   m_ObjectHideFlags: 0
